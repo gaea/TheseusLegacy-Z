@@ -1,0 +1,7 @@
+#! /bin/bash
+export CLASSPATH=.:../j3d/lib_32/ext/j3dcore.jar:../j3d/lib_32/ext/j3dutils.jar:../j3d/lib_32/ext/vecmath.jar
+export LD_LIBRARY_PATH=../j3d/lib_32/i386
+echo $LD_LIBRARY_PATH
+cd source
+java TheseusLegacyGUI > ../informeTheseusLegacy.txt
+kate ../informeTheseusLegacy.txt

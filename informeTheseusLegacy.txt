@@ -1,0 +1,61 @@
+
+archivo leido: 
+4 0 0 0 0 1 0 0 0 0
+1 1 1 1 0 1 1 1 1 0
+0 0 0 1 0 1 0 3 0 0
+0 1 0 0 0 0 0 1 1 2
+0 1 1 1 0 1 0 1 0 0
+0 0 0 1 0 0 0 1 0 1
+1 1 0 1 0 1 0 0 0 1
+0 0 0 1 3 1 1 1 1 1
+0 1 1 1 0 1 0 0 0 5
+0 0 0 0 0 0 0 1 1 1
+
+cargando mapa ...
+tamano 10x10
+4 0 0 0 0 1 0 0 0 0  
+1 1 1 1 0 1 1 1 1 0  
+0 0 0 1 0 1 0 3 0 0  
+0 1 0 0 0 0 0 1 1 2  
+0 1 1 1 0 1 0 1 0 0  
+0 0 0 1 0 0 0 1 0 1  
+1 1 0 1 0 1 0 0 0 1  
+0 0 0 1 3 1 1 1 1 1  
+0 1 1 1 0 1 0 0 0 5  
+0 0 0 0 0 0 0 1 1 1  
+posicion del raton; x =0, y=0
+posicion del queso; x =9, y=3
+posicion del gato1; x =7, y=2
+posicion del gato2; x =4, y=7
+posicion de la salida; x =9, y=8
+cargando mapa ...
+tamano 10x10
+4 0 0 0 0 1 0 0 0 0  
+1 1 1 1 0 1 1 1 1 0  
+0 0 0 1 0 1 0 3 0 0  
+0 1 0 0 0 0 0 1 1 2  
+0 1 1 1 0 1 0 1 0 0  
+0 0 0 1 0 0 0 1 0 1  
+1 1 0 1 0 1 0 0 0 1  
+0 0 0 1 3 1 1 1 1 1  
+0 1 1 1 0 1 0 0 0 5  
+0 0 0 0 0 0 0 1 1 1  
+posicion del raton; x =0, y=0
+posicion del queso; x =9, y=3
+posicion del gato1; x =7, y=2
+posicion del gato2; x =4, y=7
+posicion de la salida; x =9, y=8
+movimientos !!!
+A D A A D D B B B D D B B B D D D D Encontre el queso en la posicion: 9, 3
+movimientos !!!
+D D D A D D B B B B I I A I I B B I B 
+cantidad nodos creados: 176
+cantidad nodos expandidos: 156
+Encontre el queso en la posicion: 9, 8
+tiempo en nano segundos : 5216490
+todos los movimientos: 
+[D, D, D, D, B, B, B, D, D, B, B, B, D, D, A, A, D, A] [B, I, B, B, I, I, A, I, I, B, B, B, B, D, D, A, D, D, D]
+Fin de busquedaAStarMango
+vector final de movimientos: [D, D, D, D, B, B, B, D, D, B, B, B, D, D, A, A, D, A, B, I, B, B, I, I, A, I, I, B, B, B, B, D, D, A, D, D, D]
+altura del arbol: 36
+Eso es todo amigos !!!!!!
