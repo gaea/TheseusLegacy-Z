@@ -52,10 +52,77 @@ D D D A D D B B B B I I A I I B B I B
 cantidad nodos creados: 176
 cantidad nodos expandidos: 156
 Encontre el queso en la posicion: 9, 8
-tiempo en nano segundos : 5216490
+tiempo en nano segundos : 4913914
 todos los movimientos: 
 [D, D, D, D, B, B, B, D, D, B, B, B, D, D, A, A, D, A] [B, I, B, B, I, I, A, I, I, B, B, B, B, D, D, A, D, D, D]
 Fin de busquedaAStarMango
 vector final de movimientos: [D, D, D, D, B, B, B, D, D, B, B, B, D, D, A, A, D, A, B, I, B, B, I, I, A, I, I, B, B, B, B, D, D, A, D, D, D]
 altura del arbol: 36
+Eso es todo amigos !!!!!!
+Nombre del Archivo :   Prueba6.txt
+Ruta :   /home/gaea/TheseusLegacy-Z/maps/Prueba6.txt
+Ruta Absoluta :   /home/gaea/TheseusLegacy-Z/maps/Prueba6.txt
+Permisos de Escritura :   true
+Permisos de Lectura :   true
+Tamaño :   200Bytes
+
+archivo leido: 
+4 0 0 0 5 1 2 0 0 0
+1 1 1 1 0 1 1 1 1 0
+1 1 1 1 0 1 0 3 0 0
+1 1 1 1 0 3 0 1 1 0
+1 1 1 1 0 1 0 1 0 0
+1 1 1 1 0 0 0 1 0 1
+1 1 1 1 0 1 0 0 0 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+
+cargando mapa ...
+tamano 10x10
+4 0 0 0 5 1 2 0 0 0  
+1 1 1 1 0 1 1 1 1 0  
+1 1 1 1 0 1 0 3 0 0  
+1 1 1 1 0 3 0 1 1 0  
+1 1 1 1 0 1 0 1 0 0  
+1 1 1 1 0 0 0 1 0 1  
+1 1 1 1 0 1 0 0 0 1  
+1 1 1 1 1 1 1 1 1 1  
+1 1 1 1 1 1 1 1 1 1  
+1 1 1 1 1 1 1 1 1 1  
+posicion del raton; x =0, y=0
+posicion del queso; x =6, y=0
+posicion del gato1; x =7, y=2
+posicion del gato2; x =5, y=3
+posicion de la salida; x =4, y=0
+cargando mapa ...
+tamano 10x10
+4 0 0 0 5 1 2 0 0 0  
+1 1 1 1 0 1 1 1 1 0  
+1 1 1 1 0 1 0 3 0 0  
+1 1 1 1 0 3 0 1 1 0  
+1 1 1 1 0 1 0 1 0 0  
+1 1 1 1 0 0 0 1 0 1  
+1 1 1 1 0 1 0 0 0 1  
+1 1 1 1 1 1 1 1 1 1  
+1 1 1 1 1 1 1 1 1 1  
+1 1 1 1 1 1 1 1 1 1  
+posicion del raton; x =0, y=0
+posicion del queso; x =6, y=0
+posicion del gato1; x =7, y=2
+posicion del gato2; x =5, y=3
+posicion de la salida; x =4, y=0
+movimientos !!!
+I I I A A A A D A A D D B D D B B B B B D D D D Encontre el queso en la posicion: 6, 0
+movimientos !!!
+A A A A A I I A I I B B I B B B B D D D 
+cantidad nodos creados: 74
+cantidad nodos expandidos: 63
+Encontre el queso en la posicion: 4, 0
+tiempo en nano segundos : 1538896
+todos los movimientos: 
+[D, D, D, D, B, B, B, B, B, D, D, B, D, D, A, A, D, A, A, A, A, I, I, I] [D, D, D, B, B, B, B, I, B, B, I, I, A, I, I, A, A, A, A, A]
+Fin de busquedaAStarMango
+vector final de movimientos: [D, D, D, D, B, B, B, B, B, D, D, B, D, D, A, A, D, A, A, A, A, I, I, I, D, D, D, B, B, B, B, I, B, B, I, I, A, I, I, A, A, A, A, A]
+altura del arbol: 43
 Eso es todo amigos !!!!!!

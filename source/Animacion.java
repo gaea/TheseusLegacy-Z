@@ -16,31 +16,29 @@ public class Animacion extends JFrame
 {
     public Animacion( Vector movimientos, Ambiente ambiente) 
     {
-	
         //setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("Theseus Legacy");
         setMinimumSize(new Dimension(1000, 800));
-	setVisible(true);
+		setVisible(true);
         setResizable(false);
 
-	screen = new JApplet();
-	screen.setLayout(new BorderLayout());
-	GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
-	Canvas3D canvas3D = new Canvas3D(config);
+		screen = new JApplet();
+		screen.setLayout(new BorderLayout());
+		GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
+		Canvas3D canvas3D = new Canvas3D(config);
 
-	SimpleUniverse simpleU = new SimpleUniverse(canvas3D);
-	simpleU.getViewingPlatform().setNominalViewingTransform();
+		SimpleUniverse simpleU = new SimpleUniverse(canvas3D);
+		simpleU.getViewingPlatform().setNominalViewingTransform();
 
-	View view = simpleU.getViewer().getView();
-	//view.setTransparencySortingPolicy(View.TRANSPARENCY_SORT_GEOMETRY);
+		View view = simpleU.getViewer().getView();
+		//view.setTransparencySortingPolicy(View.TRANSPARENCY_SORT_GEOMETRY);
 
-	scene = new Scene(simpleU, movimientos, ambiente, canvas3D);
-	simpleU.addBranchGraph(scene);
-	screen.add("Center", canvas3D);
-	
-	add(screen);
-	pack();
-	
+		scene = new Scene(simpleU, movimientos, ambiente, canvas3D);
+		simpleU.addBranchGraph(scene);
+		screen.add("Center", canvas3D);
+		
+		add(screen);
+		pack();
     }
 
     private JApplet screen;

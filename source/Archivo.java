@@ -9,71 +9,78 @@ public class Archivo{
     private JFileChooser selectorArchivo;
     private File nomArchivo;
     private String propiedadesArchivo;
+    private String rutaAbsoluta;
 
     public Archivo(){
-	//abrirArchivo();
-	//leerArchivo(nombreArchivo);
+
     }
     
     public void abrirArchivo(){
-	selectorArchivo = new JFileChooser(System.getProperty("user.dir"));
-	int resultado = selectorArchivo.showOpenDialog( null );
+		selectorArchivo = new JFileChooser(System.getProperty("user.dir"));
+		int resultado = selectorArchivo.showOpenDialog( null );
 
-	if( resultado == JFileChooser.CANCEL_OPTION ){
-	    JOptionPane.showMessageDialog(null, "Nombre de archivo incorrecto", "Nombre incorrecto", JOptionPane.ERROR_MESSAGE);
-	    System.exit(0);
-	}
+		if( resultado == JFileChooser.CANCEL_OPTION ){
+		    JOptionPane.showMessageDialog(null, "Nombre de archivo incorrecto", "Nombre incorrecto", JOptionPane.ERROR_MESSAGE);
+		    System.exit(0);
+		}
 
-	if( resultado == JFileChooser.APPROVE_OPTION ){
-	    nomArchivo = selectorArchivo.getSelectedFile() ;
+		if( resultado == JFileChooser.APPROVE_OPTION ){
+		    nomArchivo = selectorArchivo.getSelectedFile() ;
 
-	    if (nomArchivo==null || nomArchivo.getName().equals("")){
-		JOptionPane.showMessageDialog(null, "Nombre de archivo incorrecto", "Nombre incorrecto o Vacio", JOptionPane.ERROR_MESSAGE);
-		System.exit(0);
-	    }
+		    if (nomArchivo==null || nomArchivo.getName().equals("")){
+				JOptionPane.showMessageDialog(null, "Nombre de archivo incorrecto", "Nombre incorrecto o Vacio", JOptionPane.ERROR_MESSAGE);
+				System.exit(0);
+		    }
+		    else {
+		    	nombreArchivo = nomArchivo.getName();
+		    	rutaAbsoluta = nomArchivo.getAbsolutePath();
+			}	
 
-	    else
-	    nombreArchivo= nomArchivo.getName();
-
-	    if(nomArchivo.exists()){
-		propiedadesArchivo = "Nombre del Archivo :   "+nomArchivo.getName()+"\nRuta :   "+nomArchivo.getPath()+
-		"\nRuta Absoluta :   "+nomArchivo.getAbsolutePath()+"\nPermisos de Escritura :   "+nomArchivo.canRead()+"\nPermisos de Lectura :   "+nomArchivo.canWrite()+
-		"\nTamaño :   "+(nomArchivo.length())+"Bytes";
-	    }
-	}
+		    if(nomArchivo.exists()){
+				propiedadesArchivo = "Nombre del Archivo :   "+nomArchivo.getName()+"\nRuta :   "+nomArchivo.getPath()+
+				"\nRuta Absoluta :   "+nomArchivo.getAbsolutePath()+"\nPermisos de Escritura :   "+nomArchivo.canRead()+"\nPermisos de Lectura :   "+nomArchivo.canWrite()+
+				"\nTamaño :   "+(nomArchivo.length())+"Bytes";
+				System.out.println(propiedadesArchivo);
+		    }
+		}
     }
 
     public void leerArchivo(String nombre){
-	String renglon= "";
-	archivo="";
+		String renglon= "";
+		archivo="";
 
-	try{
-	    RandomAccessFile file = new RandomAccessFile(nombre, "rw");
-	    renglon= file.readLine( );
-		
-	    while( renglon != null ){
-		archivo+= renglon+"\n";
-		renglon= file.readLine( );
-	    }
+		try{
+		    RandomAccessFile file = new RandomAccessFile(nombre, "rw");
+		    renglon= file.readLine( );
+			
+		    while( renglon != null ){
+				archivo+= renglon+"\n";
+				renglon= file.readLine( );
+		    }
 
-	    archivo=archivo.substring(0, archivo.length()-1);
-	    file.close();
-	    System.out.println( "\narchivo leido: \n"+archivo+"\n" );
-	}
+		    archivo=archivo.substring(0, archivo.length()-1);
+		    file.close();
+		    System.out.println( "\narchivo leido: \n"+archivo+"\n" );
+		}
 
-	catch( IOException e )
-	{ System.out.println("Error al buscar en el archivo"); }
+		catch( IOException e ){ 
+			System.out.println("Error al buscar en el archivo"); 
+		}
     }
 
     public String getArchivo(){
-	return archivo;
+		return archivo;
     }
 
     public String getNombreArchivo(){
-	return nombreArchivo;
+		return nombreArchivo;
+    }
+
+    public String getRutaAbsoluta() {
+    	return rutaAbsoluta;
     }
 
     public static void main(String args []){
-	new Archivo();
+		new Archivo();
     }
 }

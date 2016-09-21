@@ -14,6 +14,7 @@ public class TheseusLegacyGUI extends javax.swing.JFrame {
     private String busqueda = "";
     private Vector movimientos;
     private Sound sonidoJuego;
+    private String rutaArchivo = "../maps/eliza.txt";
 
     /** Creates new form TheseusLegacyGUI */
     public TheseusLegacyGUI() {
@@ -59,7 +60,7 @@ public class TheseusLegacyGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jLabel2.setText("Cargar Mapa : ");
 
-        jTextField1.setText("eliza.txt");
+        jTextField1.setText("maps/eliza.txt");
 
         jButton1.setText("...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -243,50 +244,47 @@ public class TheseusLegacyGUI extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-	archivo.abrirArchivo();
-	jTextField1.setText(archivo.getNombreArchivo());
-	
+	   archivo.abrirArchivo();
+	   jTextField1.setText(archivo.getNombreArchivo());
+       rutaArchivo = archivo.getRutaAbsoluta();
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-	
-	if(busqueda!=""){
-	    archivo.leerArchivo(jTextField1.getText());
-	    Ambiente ambiente = new Ambiente(archivo.getArchivo());
-	    Ambiente copiaAmbiente = new Ambiente(archivo.getArchivo());
+    	if(busqueda!=""){
+    	    archivo.leerArchivo(rutaArchivo);
+    	    Ambiente ambiente = new Ambiente(archivo.getArchivo());
+    	    Ambiente copiaAmbiente = new Ambiente(archivo.getArchivo());
 
-	    Raton raton = new Raton("S");
-	    raton.setPosicionXRaton(ambiente.getPosicionXRaton());
-	    raton.setPosicionYRaton(ambiente.getPosicionYRaton());
-	    if(busqueda == "busquedaPreferenteAmplitud" || 
-	       busqueda == "busquedaPreferenteCostoUniforme" || 	
-	       busqueda == "busquedaProfundidadConCiclos" ||
-	       busqueda == "busquedaProfundidadSinCiclos"){
-		busquedasNoInformadas = new BusquedasNoInformadas(raton, ambiente, busqueda);
-		movimientos = busquedasNoInformadas.getMovimientos();
-	    }
-	    else{
-		busquedasInformadas = new BusquedasInformadas(raton, ambiente, busqueda);
-		movimientos = busquedasInformadas.getMovimientos();
-	    }
-	    if(sonidoJuego!= null){ sonidoJuego.task("play");}
-	    else{ System.out.println("no se pudo cargar el sonido");}
-	    
-	    new Animacion(movimientos, copiaAmbiente);
-	}
+    	    Raton raton = new Raton("S");
+    	    raton.setPosicionXRaton(ambiente.getPosicionXRaton());
+    	    raton.setPosicionYRaton(ambiente.getPosicionYRaton());
+    	    if(busqueda == "busquedaPreferenteAmplitud" || 
+    	       busqueda == "busquedaPreferenteCostoUniforme" || 	
+    	       busqueda == "busquedaProfundidadConCiclos" ||
+    	       busqueda == "busquedaProfundidadSinCiclos"){
+        		busquedasNoInformadas = new BusquedasNoInformadas(raton, ambiente, busqueda);
+        		movimientos = busquedasNoInformadas.getMovimientos();
+    	    }
+    	    else{
+        		busquedasInformadas = new BusquedasInformadas(raton, ambiente, busqueda);
+        		movimientos = busquedasInformadas.getMovimientos();
+    	    }
+    	    if(sonidoJuego!= null){ sonidoJuego.task("play");}
+    	    else{ System.out.println("no se pudo cargar el sonido");}
+    	    
+    	    new Animacion(movimientos, copiaAmbiente);
+    	}
     }
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         busqueda = "busquedaPreferenteAmplitud";
-	jRadioButton2.setSelected(false);
-	jRadioButton3.setSelected(false);
-	jRadioButton4.setSelected(false);
-	jRadioButton5.setSelected(false);
-	jRadioButton6.setSelected(false);
-	jRadioButton7.setSelected(false);
-	jRadioButton8.setSelected(false);
-	
+    	jRadioButton2.setSelected(false);
+    	jRadioButton3.setSelected(false);
+    	jRadioButton4.setSelected(false);
+    	jRadioButton5.setSelected(false);
+    	jRadioButton6.setSelected(false);
+    	jRadioButton7.setSelected(false);
+    	jRadioButton8.setSelected(false);
     }
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
